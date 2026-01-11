@@ -45,6 +45,10 @@ const QuestionsContainer = () => {
 
     function checkAnswer(i){
         if (!clickAuth) return;
+        const isCorrect = currentQuestion.answers[i].value;
+        if(isCorrect){
+            setScore(prev => prev + 1);
+        }
 
         setQuestions(prevQuestions =>{
             let newQuestions = [...questions];
@@ -52,7 +56,7 @@ const QuestionsContainer = () => {
 
             if(answers[i].value){
                 answers[i] = {...answers[i], id: "correct"};
-                setScore(prev => prev + 1);
+                
             } else {
                 answers[i] = {...answers[i], id: "incorrect"};
                 const correctIndex = answers.findIndex(a => a.value);
