@@ -3,4 +3,4 @@
 A simple quiz app built with React.
 
 ## Screenshot
-![Quiz Screenshot](public/assets/quizAppPic.png)
+![Quiz Screenshot](public/assets/quizAppImg.png)
